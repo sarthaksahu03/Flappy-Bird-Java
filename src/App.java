@@ -6,11 +6,17 @@ public class App {
         int boardheight = 640;
 
         JFrame frame = new JFrame("FlappyBird");
-        frame.setVisible(true);
+
         frame.setSize(boardwidth, boardheight);
         frame.setLocationRelativeTo(null);
         frame.setResizable(false);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        FlappyBird flappybird = new FlappyBird();
+        frame.add(flappybird);
+        frame.pack();
+        flappybird.requestFocus();
+        frame.setVisible(true);
 
     }
 }
